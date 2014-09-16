@@ -20,4 +20,4 @@ function cgit_login_style () {
     echo "<link rel='stylesheet' href='$uri/login-style.css' />";
 }
 
-add_action('login_head', 'cgit_login_style')
+add_action('login_enqueue_scripts', 'cgit_login_style')
