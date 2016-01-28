@@ -15,9 +15,7 @@ License: MIT
 /**
  * Add CSS to login page
  */
-function cgit_login_style () {
-    $uri = get_stylesheet_directory_uri();
-    echo "<link rel='stylesheet' href='$uri/login-style.css' />";
-}
-
-add_action('login_enqueue_scripts', 'cgit_login_style');
+add_action('login_enqueue_scripts', function() {
+    echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri()
+        . '/login-style.css" />';
+});
